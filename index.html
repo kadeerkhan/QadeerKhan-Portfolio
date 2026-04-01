@@ -218,7 +218,7 @@
 
     .hero-portrait {
       position: relative;
-      justify-self: end;
+      justify-self: center;
       width: 100%;
       max-width: 280px;
       aspect-ratio: 4 / 5;
@@ -230,6 +230,17 @@
         linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
       overflow: hidden;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .hero-portrait-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 14px;
+      z-index: 0;
     }
 
     .hero-portrait::before {
@@ -1160,7 +1171,7 @@
       }
 
       .hero-portrait {
-        justify-self: start;
+        justify-self: center;
         max-width: 240px;
       }
 
@@ -1330,10 +1341,9 @@
       </div>
 
       <div class="hero-portrait reveal reveal-delay-2" aria-label="Profile picture placeholder">
-        <div class="hero-portrait-label">
-          <span>Photo Placeholder</span>
-          <span>Add portrait</span>
-        </div>
+        <img src="images/personal.jpeg" alt="Profile picture" class="hero-portrait-img" width="280" height="350"
+          loading="lazy" />
+
       </div>
     </div>
 
