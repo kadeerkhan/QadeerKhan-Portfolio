@@ -643,10 +643,29 @@
         linear-gradient(160deg, #0e1520 0%, #080a0f 100%);
     }
 
+    .project-card-odaqe .project-inner {
+      flex-direction: row-reverse;
+    }
+
     .project-card-artini .project-bg {
       background:
         radial-gradient(ellipse 60% 50% at 20% 80%, rgba(200, 100, 80, 0.15) 0%, transparent 60%),
         linear-gradient(160deg, #15100e 0%, #080a0f 100%);
+    }
+
+    .project-card-artini .project-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .project-card-artini .project-text {
+      flex: 1;
+    }
+
+    .project-card-artini .project-inner {
+      min-height: 280px;
     }
 
     .project-card-ml .project-bg {
@@ -749,26 +768,6 @@
       background: rgba(255, 255, 255, 0.04);
       border-radius: 1px;
       color: var(--muted);
-    }
-
-    .project-arrow {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      color: var(--muted);
-      transition: all 0.3s var(--ease);
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    .project-card:hover .project-arrow {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: rotate(45deg);
     }
 
     /* Screens mockup strip */
@@ -1359,26 +1358,27 @@
       <div class="section-label">About</div>
       <h2 class="section-title">Bridging <em>intelligence</em><br>and intuition</h2>
       <p>I'm a <strong>Machine Learning Engineer</strong> with over 3 years of experience building AI systems that solve
-        real problems — from LLM evaluation pipelines to computer vision services. But engineering is only half of what
-        I do.</p>
-      <p>The other half is <strong>design</strong>. I believe the best technology disappears — it becomes the experience
-        itself. My work sits at the intersection of intelligent systems and human-centred design, creating products that
-        feel as good as they perform.</p>
-      <p>I'm applying to the <strong>Space & Design programme</strong> at Thomas More to formalise and deepen this
-        practice, bringing a rigorous technical foundation to spatial and interaction design.</p>
+        real problems from LLM evaluation pipelines to computer vision services. My work has focused on developing
+        reliable,
+        scalable systems and understanding how intelligent models behave in practical environments.</p>
+      <p>While my foundation is deeply technical, I’ve become increasingly interested in how these systems are
+        <strong>experienced by people</strong>.
+      </p>
+      <p>I’m now exploring <strong>design</strong> to better understand how intelligent systems can feel intuitive,
+        usable, and meaningful.</p>
 
       <div class="about-stats">
         <div class="stat reveal reveal-delay-1">
-          <div class="stat-num">3+</div>
+          <div class="stat-num">4+</div>
           <div class="stat-label">Years experience</div>
         </div>
         <div class="stat reveal reveal-delay-2">
           <div class="stat-num">20+</div>
-          <div class="stat-label">LLM projects</div>
+          <div class="stat-label">LLM Pipeline projects</div>
         </div>
         <div class="stat reveal reveal-delay-3">
           <div class="stat-num">2</div>
-          <div class="stat-label">Design systems built</div>
+          <div class="stat-label">Screens designed</div>
         </div>
         <div class="stat reveal reveal-delay-1">
           <div class="stat-num">1</div>
@@ -1456,13 +1456,8 @@
             </div>
           </div>
           <div class="project-footer">
-            <div class="screens-strip">
-              <div class="screen-mock screen-mock-tall sm-blue"></div>
-              <div class="screen-mock screen-mock-tall sm-dark"></div>
-              <div class="screen-mock screen-mock-med sm-mid"></div>
-              <div class="screen-mock screen-mock-short sm-blue"></div>
-            </div>
-            <a href="#" class="project-arrow">↗</a>
+            <img src="images/o_courses.jpg" alt="Odaqe Mobile App preview" class="project-preview-img" width="170"
+              height="300" />
           </div>
         </div>
       </div>
@@ -1473,23 +1468,23 @@
         <div class="project-num">02</div>
         <div class="project-inner">
           <div class="project-meta">
-            <span class="project-tag">UI/UX Design · Web Platform</span>
-            <h3 class="project-title">Artini</h3>
-            <p class="project-desc">A decentralised AI art generation platform where creators generate, merchandise, and
-              sell AI artwork. Designed the full web experience — from the AI generation interface with style selectors,
-              to a clothing customiser and community marketplace.</p>
-            <div class="edu-courses" style="margin-top:1.5rem;">
-              <span class="edu-course">Web UI</span>
-              <span class="edu-course">AI Product Design</span>
-              <span class="edu-course">Marketplace</span>
-              <span class="edu-course">Figma</span>
+            <div class="project-text">
+              <span class="project-tag">UI/UX Design · Web Platform</span>
+              <h3 class="project-title">Artini</h3>
+              <p class="project-desc">A decentralised AI art generation platform where creators generate, merchandise,
+                and
+                sell AI artwork. Designed the full web experience — from the AI generation interface with style
+                selectors,
+                to a clothing customiser and community marketplace.</p>
+              <div class="edu-courses" style="margin-top:1.5rem;">
+                <span class="edu-course">Web UI</span>
+                <span class="edu-course">AI Product Design</span>
+                <span class="edu-course">Marketplace</span>
+                <span class="edu-course">Figma</span>
+              </div>
             </div>
-          </div>
-          <div class="project-footer"
-            style="margin-top:2rem; display:flex; justify-content:space-between; align-items:flex-end;">
-            <span style="font-size:0.75rem; color:var(--muted); max-width:160px; line-height:1.5;">Web · Desktop &
-              Mobile</span>
-            <a href="#" class="project-arrow">↗</a>
+            <img src="images/AGA.jpg" alt="Artini Web Platform preview" class="project-preview-img" width="240"
+              height="150" />
           </div>
         </div>
       </div>
@@ -1510,13 +1505,13 @@
               <span class="edu-course">BERT</span>
               <span class="edu-course">PyTorch</span>
               <span class="edu-course">Computer Vision</span>
+              <span class="edu-course">Python</span>
+              <span class="edu-course">Keras</span>
             </div>
           </div>
           <div class="project-footer"
-            style="margin-top:2rem; display:flex; justify-content:space-between; align-items:flex-end;">
-            <span style="font-size:0.75rem; color:var(--muted); max-width:160px; line-height:1.5;">Python · Keras ·
-              Darknet</span>
-            <a href="https://github.com/kadeerkhan" class="project-arrow" target="_blank">↗</a>
+            style="margin-top:2rem; display:flex; justify-content:flex-start; align-items:flex-end;">
+
           </div>
         </div>
       </div>
@@ -1540,16 +1535,9 @@
             </div>
           </div>
           <div class="project-footer"
-            style="margin-top:2rem; display:flex; justify-content:space-between; align-items:flex-end; gap:1rem;">
-            <div class="placeholder-panel" aria-label="Dream AI project placeholder">
-              <span class="placeholder-badge">Project preview placeholder</span>
-              <div class="placeholder-lines">
-                <div class="placeholder-line long"></div>
-                <div class="placeholder-line med"></div>
-                <div class="placeholder-line short"></div>
-              </div>
-            </div>
-            <a href="#" class="project-arrow" aria-label="Pronto placeholder link">↗</a>
+            style="margin-top:1rem; display:flex; justify-content:flex-start; align-items:flex-end; gap:1rem;">
+            <img src="images/pronto.jpeg" alt="Pronto Video Personalization preview" class="project-preview-img"
+              width="250" height="160" />
           </div>
         </div>
       </div>
@@ -1572,16 +1560,10 @@
             </div>
           </div>
           <div class="project-footer"
-            style="margin-top:2rem; display:flex; justify-content:space-between; align-items:flex-end; gap:1rem;">
-            <div class="placeholder-panel" aria-label="Dream AI project placeholder">
-              <span class="placeholder-badge">Project preview placeholder</span>
-              <div class="placeholder-lines">
-                <div class="placeholder-line med"></div>
-                <div class="placeholder-line long"></div>
-                <div class="placeholder-line short"></div>
-              </div>
-            </div>
-            <a href="#" class="project-arrow" aria-label="Anomaly detection placeholder link">↗</a>
+            style="margin-top:2rem; display:flex; justify-content:flex-start; align-items:flex-end; gap:1rem;">
+            <img src="images/sample_segmentations.png" alt="Image Quality Enhancement preview"
+              class="project-preview-img" width="250" height="160" />
+
           </div>
         </div>
       </div>
@@ -1604,16 +1586,9 @@
             </div>
           </div>
           <div class="project-footer"
-            style="margin-top:2rem; display:flex; justify-content:space-between; align-items:flex-end; gap:1rem;">
-            <div class="placeholder-panel" aria-label="Dream AI project placeholder">
-              <span class="placeholder-badge">Project preview placeholder</span>
-              <div class="placeholder-lines">
-                <div class="placeholder-line long"></div>
-                <div class="placeholder-line short"></div>
-                <div class="placeholder-line med"></div>
-              </div>
-            </div>
-            <a href="#" class="project-arrow" aria-label="Image enhancement placeholder link">↗</a>
+            style="margin-top:2rem; display:flex; justify-content:flex-start; align-items:flex-end; gap:1rem;">
+            <img src="images/ie.jpeg" alt="Anomaly Detection System preview" class="project-preview-img" width="250"
+              height="160" />
           </div>
         </div>
       </div>
@@ -1642,7 +1617,7 @@
             <span class="skill-tag">UI/UX Design</span>
             <span class="skill-tag">Mobile Design</span>
             <span class="skill-tag">Web Design</span>
-            <span class="skill-tag">Design Systems</span>
+            <span class="skill-tag">Screen Design</span>
             <span class="skill-tag">User Flows</span>
             <span class="skill-tag">Prototyping</span>
           </div>
